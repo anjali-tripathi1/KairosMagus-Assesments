@@ -1,0 +1,96 @@
+
+// Assignment1:Declare variables called country, continent and population and assign their values according to your own country (population in millions).
+
+// Log their values to the console.
+
+
+let country = 'India'
+let continent = 'Asia'
+let population = 1408.0
+
+console.log(`Country is: ${country} and Continent is: ${continent} and Population is: ${population} in million.`);
+
+
+
+
+
+// Assignment2:Declare a variable called isIsland and set its value according to your country. The variable should hold a Boolean value. Also declare a variable language, but don't assign it any value yet.
+
+// Log the types of isIsland, population, country and language to the console.
+
+
+let isIsland = Boolean(country)
+let language;
+console.log(`isIsland is : ${isIsland}`);
+console.log(`Language is : ${language}`);
+
+
+
+// Assignment3:Set the value of language to the language spoken where you live (some countries have multiple languages, but just choose one).
+
+// Think about which variables should be const variables (which values will never change, and which might change?). Then, change these variables to const.
+
+// Try to change one of the changed variables now, and observe what happens.
+
+
+const spokenLanguage = 'Hindi'
+console.log(`spokenLanguage is: ${spokenLanguage }`);
+
+// const spokenLanguage = 'English'
+// console.log(`spokenLanguage is: ${spokenLanguage}`);   // throws an Error
+
+
+
+
+// Coding Challenge #1 
+// Mark and John are trying to compare their BMI (Body Mass Index), which is 
+// calculated using the formula: 
+// BMI = mass / height ** 2 = mass / (height * height) (mass in kg 
+// and height in meter). 
+// Your tasks: 
+// 1. Store Mark's and John's mass and height in variables 
+// 2. Calculate both their BMIs using the formula (you can even implement both 
+// versions) 
+// 3. Create a Boolean variable 'markHigherBMI' containing information about 
+// whether Mark has a higher BMI than John. 
+// Test data: 
+// § Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 
+// m tall. 
+// § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 
+// m tall. 
+
+
+let markMass = 78
+let markHeight = 1.69
+
+let markMass2 = 95
+let markHeight2 = 1.88
+
+let johnMass = 92
+let johnHeight = 1.95
+
+let johnMass2 = 95
+let johnHeight2 = 1.88
+
+const bmiMark = (markMass / markHeight ** 2).toFixed(2)
+const bmiJohn = (johnMass / johnHeight ** 2).toFixed(2)
+
+console.log(`Mark's Body Mass Index : ${bmiMark}`)
+console.log(`John's Body Mass Index : ${bmiJohn}`);
+
+let markHigherBMI = true
+
+
+function calculateBmi () {
+      if(bmiMark > bmiJohn){
+          return `Mark's bmi (${bmiMark}) is greater than john's bmi (${bmiJohn}) and Result is : ${markHigherBMI} `
+      } 
+      else if(bmiMark === bmiJohn) {
+           return `Mark's bmi (${bmiMark}) is Equal to john's bmi (${bmiJohn}) and Result is : ${markHigherBMI} `
+      }
+       else {
+          return `Mark's bmi (${bmiMark}) is less than john's bmi (${bmiJohn}) and Result is : false ` 
+      }
+}
+
+console.log(calculateBmi());

@@ -21,8 +21,10 @@ console.log(`Country is: ${country} and Continent is: ${continent} and Populatio
 
 let isIsland = Boolean(country)
 let language;
-console.log(`isIsland is : ${isIsland}`);
-console.log(`Language is : ${language}`);
+console.log(`Type of isIsland is : ${typeof (isIsland)}`);
+console.log(`Type of language is : ${typeof (language)}`);
+console.log(`Type of population is: ${typeof (population)}`);
+console.log(`Type of country is: ${typeof (country)}`);
 
 
 
@@ -69,14 +71,14 @@ let markHeight2 = 1.88
 let johnMass = 92
 let johnHeight = 1.95
 
-let johnMass2 = 95
-let johnHeight2 = 1.88
+let johnMass2 = 85
+let johnHeight2 = 1.76
 
 const bmiMark = (markMass / markHeight ** 2).toFixed(2)
 const bmiJohn = (johnMass / johnHeight ** 2).toFixed(2)
 
-console.log(`Mark's Body Mass Index : ${bmiMark}`)
-console.log(`John's Body Mass Index : ${bmiJohn}`);
+// console.log(`Mark's Body Mass Index : ${bmiMark}`)
+// console.log(`John's Body Mass Index : ${bmiJohn}`);
 
 let markHigherBMI = true
 
@@ -85,9 +87,7 @@ function calculateBmi () {
       if(bmiMark > bmiJohn){
           return `Mark's bmi (${bmiMark}) is greater than john's bmi (${bmiJohn}) and Result is : ${markHigherBMI} `
       } 
-      else if(bmiMark === bmiJohn) {
-           return `Mark's bmi (${bmiMark}) is Equal to john's bmi (${bmiJohn}) and Result is : ${markHigherBMI} `
-      }
+    
        else {
           return `Mark's bmi (${bmiMark}) is less than john's bmi (${bmiJohn}) and Result is : false ` 
       }

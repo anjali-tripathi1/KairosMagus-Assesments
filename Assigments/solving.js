@@ -18,7 +18,7 @@ console.log(`Country is: ${country} and Continent is: ${continent} and Populatio
 // Log the types of isIsland, population, country and language to the console.
 
 
-let isIsland = Boolean(country)
+const isIsland = Boolean(country)
 let language;
 console.log(`Type of isIsland is : ${typeof (isIsland)}`);
 console.log(`Type of language is : ${typeof (language)}`);
@@ -61,35 +61,23 @@ console.log(`spokenLanguage is: ${spokenLanguage }`);
 // m tall. 
 
 
-let markMass = 78;
-let markHeight = 1.69;
 
-let markMass2 = 95;
-let markHeight2 = 1.88;
+function calculateToBmi (markMass, markHeight, johnMass, johnHeight) {
+    let markBmi = (( markMass / markHeight ) ** 2 ).toFixed(2)
+    let johnBmi = ((johnMass /  johnHeight ) ** 2 ).toFixed(2)
+    let markHigherBMI = true;
+    if(markBmi > johnBmi){
+         return `mark's bmi (${markBmi} is greater than john's bmi ${johnBmi}) and Result is : ${markHigherBMI}`
+    } else {
+         markHigherBMI = false
+         return `mark's bmi (${markBmi} is less than john's bmi ${johnBmi}) and Result is : ${markHigherBMI}`
+    }
 
-let johnMass = 92;
-let johnHeight = 1.95;
-
-let johnMass2 = 85;
-let johnHeight2 = 1.76;
-
-const bmiMark = (markMass / markHeight ** 2).toFixed(2)
-const bmiJohn = (johnMass / johnHeight ** 2).toFixed(2)
-
-// console.log(`Mark's Body Mass Index : ${bmiMark}`);
-// console.log(`John's Body Mass Index : ${bmiJohn}`);
-
-let markHigherBMI = true;
-
-
-function calculateBmi () {
-      if(bmiMark > bmiJohn){
-          return `Mark's bmi (${bmiMark}) is greater than john's bmi (${bmiJohn}) and Result is : ${markHigherBMI} `
-      } 
-    
-       else {
-          return `Mark's bmi (${bmiMark}) is less than john's bmi (${bmiJohn}) and Result is : false ` 
-      }
 }
 
-console.log(calculateBmi());
+console.log(calculateToBmi(78, 1.69, 92, 1.95));  // Data 1
+console.log(calculateToBmi( 95, 1.88, 85, 1.76));  // Data 2
+
+ 
+
+

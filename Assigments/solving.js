@@ -3,10 +3,9 @@
 
 // Log their values to the console.
 
-
-let country = 'India'
-let continent = 'Asia'
-let population = 1408.0
+const country = 'India';
+let continent = 'Asia';
+let population = 1408.0;
 
 console.log(`Country is: ${country} and Continent is: ${continent} and Population is: ${ population} in million.`);
 
@@ -62,25 +61,25 @@ console.log(`spokenLanguage is: ${spokenLanguage }`);
 // m tall. 
 
 
-let markMass = 78
-let markHeight = 1.69
+let markMass = 78;
+let markHeight = 1.69;
 
-let markMass2 = 95
-let markHeight2 = 1.88
+let markMass2 = 95;
+let markHeight2 = 1.88;
 
-let johnMass = 92
-let johnHeight = 1.95
+let johnMass = 92;
+let johnHeight = 1.95;
 
-let johnMass2 = 85
-let johnHeight2 = 1.76
+let johnMass2 = 85;
+let johnHeight2 = 1.76;
 
 const bmiMark = (markMass / markHeight ** 2).toFixed(2)
 const bmiJohn = (johnMass / johnHeight ** 2).toFixed(2)
 
-// console.log(`Mark's Body Mass Index : ${bmiMark}`)
+// console.log(`Mark's Body Mass Index : ${bmiMark}`);
 // console.log(`John's Body Mass Index : ${bmiJohn}`);
 
-let markHigherBMI = true
+let markHigherBMI = true;
 
 
 function calculateBmi () {

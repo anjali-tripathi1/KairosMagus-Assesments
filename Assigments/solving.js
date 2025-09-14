@@ -62,9 +62,63 @@ console.log(`spokenLanguage is: ${spokenLanguage }`);
 
 
 
-function calculateToBmi (markMass, markHeight, johnMass, johnHeight) {
-    let markBmi = (( markMass / markHeight ) ** 2 ).toFixed(2)
-    let johnBmi = ((johnMass /  johnHeight ) ** 2 ).toFixed(2)
+//   solution-1
+
+
+let markMass1 = 78
+let markHeight1 = 1.69
+
+let markMass2 = 95
+let markHeight2 = 1.88
+
+let johnMass1 = 92
+let johnHeight1 = 1.95
+
+let johnMass2 = 85
+let johnHeight2 = 1.76
+
+const bmiMark1 = (markMass1 / (markHeight1 * markHeight1)).toFixed(2)
+const bmiJohn1 = (johnMass1 / (johnHeight1 * johnHeight1)).toFixed(2)
+
+
+const bmiMark2 = (markMass2 / (markHeight2 * markHeight2)).toFixed(2)
+const bmiJohn2 = (johnMass2 / (johnHeight2 * johnHeight2)).toFixed(2)
+
+// console.log(`Mark's Body Mass Index : ${bmiMark}`)
+// console.log(`John's Body Mass Index : ${bmiJohn}`);
+
+let markHigherBMI = true
+
+
+if(bmiMark1 > bmiJohn1 ){
+     console.log(`mark's bmi (${bmiMark1} is greater than john's bmi ${bmiJohn1}) and Result is : ${markHigherBMI}`);
+
+} else {
+     markHigherBMI = false
+     console.log(`mark's bmi (${bmiMark1} is less than john's bmi ${bmiJohn1}) and Result is : ${markHigherBMI}`);
+     
+}
+
+
+
+
+if(bmiMark2 > bmiJohn2 ){
+     console.log(`mark's bmi (${bmiMark2} is greater than john's bmi ${bmiJohn2}) and Result is : ${markHigherBMI}`);
+
+} else {
+     markHigherBMI = false
+     console.log(`mark's bmi (${bmiMark2} is less than john's bmi ${bmiJohn2}) and Result is : ${markHigherBMI}`);
+     
+}
+
+
+
+
+//    solution-2
+
+function calculateBmi (markMass, markHeight, johnMass, johnHeight) {
+    let markBmi = ( markMass / (markHeight  * markHeight) ).toFixed(2)
+    let johnBmi = (johnMass /  (johnHeight  * johnHeight )).toFixed(2)
     let markHigherBMI = true;
     if(markBmi > johnBmi){
          return `mark's bmi (${markBmi} is greater than john's bmi ${johnBmi}) and Result is : ${markHigherBMI}`
@@ -75,8 +129,8 @@ function calculateToBmi (markMass, markHeight, johnMass, johnHeight) {
 
 }
 
-console.log(calculateToBmi(78, 1.69, 92, 1.95));  // Data 1
-console.log(calculateToBmi( 95, 1.88, 85, 1.76));  // Data 2
+console.log(calculateBmi( 78, 1.69, 92, 1.95 ));    // Data 1
+console.log(calculateBmi( 95, 1.88, 85, 1.76));    // Data 2
 
  
 

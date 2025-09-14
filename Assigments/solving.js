@@ -18,7 +18,7 @@ console.log(`Country is: ${country} and Continent is: ${continent} and Populatio
 // Log the types of isIsland, population, country and language to the console.
 
 
-const isIsland = Boolean(country)
+const isIsland = false;   // India is not a island
 let language;
 console.log(`Type of isIsland is : ${typeof (isIsland)}`);
 console.log(`Type of language is : ${typeof (language)}`);

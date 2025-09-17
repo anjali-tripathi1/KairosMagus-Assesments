@@ -133,3 +133,105 @@ console.log(calculateBmi( 78, 1.69, 92, 1.95 ));    // Data 1
 console.log(calculateBmi( 95, 1.88, 85, 1.76));    // Data 2
 
   
+
+
+// Assignment:4---Basic Operators﻿
+// If your country split in half, and each half would contain half the population, then how many people would live in each half?
+
+// Increase the population of your country by 1 and log the result to the console.
+
+// Finland has a population of 6 million. Does your country have more people than Finland?
+
+// The average population of a country is 33 million people. Does you country have less people than the average country?
+
+// Based on the variables you created, create a new variable description which contains a string with this format: 'Portugal is in Europe, and its 11 million people speak portuguese'.
+
+
+let eachHalf = population / 2
+console.log(`Each Half is:  ${eachHalf} million`);
+eachHalf++
+console.log(`Each Half Population increase by 1 : ${eachHalf} million`);
+
+
+
+let populationFinland = 6  // million
+if(population > populationFinland){
+     console.log(`population ${population} million is More than populationFinland ${populationFinland} million`)
+} else {
+     console.log(`population ${population} million is less than populationFinland ${populationFinland} million`)  
+}
+
+let average = 33  // million
+
+if(population < average){
+      console.log(`population ${population} million is less than average ${average} million`);
+      
+} else {
+      console.log(`population ${population} million is More than average ${average} million`);
+}
+
+
+let description = 'Portugal is in Europe, and its 11 million people speak portuguese'
+
+
+
+
+// Assignment:5---Taking Decisions: if / else Statements﻿
+// If your country's population is greater than 33 million, log a string like this to the console: "Portugal's population is 22 million below average" (the 22 is the average of 33 minus the country's population).
+
+// After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
+
+
+
+
+
+// Assignment:6--Type Conversion and Coercion﻿
+// Predict the result of these 5 operations without executing them:
+
+// console.log('9' - '5'); // -> ? 
+// console.log('19' - '13' + '17'); // -> ?
+// console.log('19' - '13' + 17); // -> ?
+// console.log('123' < 57); // -> ?
+// console.log(5 + 6 + '4' + 9 - 4 - 2); // -> ?
+// Execute the operations to check if you were right.
+
+
+ console.log('9' - '5');   
+ console.log('19' - '13' + '17');  
+ console.log('19' - '13' + 17);    
+ console.log('123' < 57);        
+ console.log(5 + 6 + '4' + 9 - 4 - 2);  
+
+ 
+
+//  Assignment:7---Declare a variable numNeighbours based on a prompt input like this:
+
+// prompt('How many neighbour countries does your contry have?');
+// If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now).
+
+// Use an else-if block to log 'More than 1 border' in case numNeighbours is greater than 1.
+
+// Use an else block to log 'No borders' (this block will be executed when numNeighbours is 0 or any other value).
+
+// Test the code with different values of numNeighbours, including 1 and 0.
+
+// Change == to ===, and test the code again, with the same values of numNeighbours. Notice what happens when there is exactly 1 border! Why is this happening?
+
+// Finally, convert numNeighbours to a number, and watch what happens now when you input 1.
+
+// Reflect on why we should use the === operator and type conversion in this situation.
+ 
+
+
+  let numNeighbours = prompt('How many neighbour countries does your contry have?')
+  if(numNeighbours == 1){
+       console.log('Only 1 border.')
+  } else if (numNeighbours > 1) {
+       console.log('More than 1 border.')
+  } else {
+       console.log('No borders.')
+  }
+
+  numNeighbours(5) 
+ 
+  

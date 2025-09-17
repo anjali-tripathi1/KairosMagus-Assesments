@@ -133,5 +133,3 @@ console.log(calculateBmi( 78, 1.69, 92, 1.95 ));    // Data 1
 console.log(calculateBmi( 95, 1.88, 85, 1.76));    // Data 2
 
  
-
-

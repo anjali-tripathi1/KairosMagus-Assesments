@@ -149,8 +149,8 @@ console.log(calculateBmi( 95, 1.88, 85, 1.76));    // Data 2
 
 let eachHalf = population / 2
 console.log(`Each Half is:  ${eachHalf} million`);
-eachHalf++
-console.log(`Each Half Population increase by 1 : ${eachHalf} million`);
+population++
+console.log(`Population increase by 1 : ${population} million`);
 
 
 
@@ -170,8 +170,9 @@ if(population < average){
       console.log(`population ${population} million is More than average ${average} million`);
 }
 
-
-let description = 'Portugal is in Europe, and its 11 million people speak portuguese'
+language = 'English'
+let description = `${country} is in ${continent} and its ${population} is million people speak ${language}`
+console.log(description);
 
 
 
@@ -223,15 +224,223 @@ let description = 'Portugal is in Europe, and its 11 million people speak portug
  
 
 
-  let numNeighbours = prompt('How many neighbour countries does your contry have?')
-  if(numNeighbours == 1){
-       console.log('Only 1 border.')
-  } else if (numNeighbours > 1) {
-       console.log('More than 1 border.')
-  } else {
-       console.log('No borders.')
-  }
+//   let numNeighbours = prompt('How many neighbour countries does your contry have?')
+//   if(numNeighbours == 1){
+//        console.log('Only 1 border.')
+//   } else if (numNeighbours > 1) {
+//        console.log('More than 1 border.')
+//   } else {
+//        console.log('No borders.')
+//   }
 
-  numNeighbours(5) 
- 
   
+
+//   let numNeighbours1 = prompt('How many neighbour countries does your contry have?')
+//   if(numNeighbours1 === 1){
+//        console.log('Only 1 border.')        // output : No borders
+//   } else if (numNeighbours1 > 1) {
+//        console.log('More than 1 border.')
+//   } else {
+//        console.log('No borders.')
+//   }
+  
+//   // here prompt returns a string not a number this 1 is treated in '1'. that's why it doesn't match any case and log No borders.
+// //   '1' === 1   // false
+
+
+// let numNeighbours2 = Number(prompt('How many neighbour countries does your contry have?'))
+//   if(numNeighbours2 === 1){
+//        console.log('Only 1 border.')        
+//   } else if (numNeighbours2 > 1) {
+//        console.log('More than 1 border.')
+//   } else {
+//        console.log('No borders.')
+//   }
+  
+  
+
+
+
+
+//   Assignment:8--Logical Operators﻿
+// Comment out the previous code so the prompt doesn't get in the way.
+
+// Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks English, has less than 50 million people and is not an island.
+
+// Write an if statement to help Sarah figure out if your country is right for her. You will need to write a condition that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if necessary.
+
+// If yours is the right country, log a strings like this 'You should live in Portugal :)'. If not, log 'Portugal does not meet your criteria :('.
+
+// Probably your country does not meet all the criteria. So go back and temporarily change some variables in order to make the condition true (unless you live in Canada :D).
+
+
+
+let country1 = 'portugal';
+let language1 = 'English';
+let population1 = 45;   // million
+let isIsland1 = false;
+
+if(language1 === 'English' && population1 < 50 && !isIsland ){
+      console.log(`You should live in ${country1}`);
+} else {
+      console.log(`${country1} does not meet your criteria.`);
+}
+
+
+
+let country2 = 'Canada';
+let language2 = 'English';
+let population2 = 55;    // million
+let isIsland2 = true;
+
+if(language2 === 'English' && population2 < 50 && !isIsland2 ){
+      console.log(`You should live in ${country2}`);
+} else {
+      console.log(`${country2} does not meet your criteria.`);
+}
+
+
+
+
+
+// Assigment-9 The switch Statement﻿
+// Use a switch statement to log the following string for the given language:
+// chinese or mandarin: 'MOST number of native speakers!';
+// spanish: '2nd place in number of native speakers';
+// english: '3rd place';
+// hindi: 'Number 4';
+// arabic: '5th most spoken language';
+// for all other simply log 'Great language too :D'
+
+   const key = ''   
+
+   switch (key) {
+       case 'chinese or mandarin':
+          console.log('Most number of native speakers!')
+         break
+         
+       case 'spanish' :  
+         console.log('2nd place in number of native speakers!')
+        break 
+
+       case 'english' :  
+         console.log('3rd place')
+        break   
+       
+       case 'hindi' :  
+         console.log('Number 4')
+        break   
+
+       case 'arabic' :  
+         console.log('5th most spoken language.')
+        break 
+       
+       default :
+         console.log('Great language too')
+        break  
+   }
+   
+ 
+
+
+
+//    Assignment:10--The Conditional (Ternary) Operator﻿
+// If your country's population is greater than 33 million, use the ternary operator to log a string like this to the console: "Portugal's population is above average". Otherwise, simply log "Portugal's population is below average". Notice how only one word change between these two sentences!
+
+// After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
+
+
+console.log(`${country1} population is ${population1 > 33 ? 'above' : 'below'} average.`);
+
+population1 = 13
+console.log(`${country1} population is ${population1 > 33 ? 'above' : 'below'} average.`);
+
+population1 = 130
+console.log(`${country1} population is ${population1 > 33 ? 'above' : 'below'} average.`);
+
+population1 = 45
+console.log(`${country1} population is ${population1 > 33 ? 'above' : 'below'} average.`);
+
+
+
+
+// Code Challenge:CHALLENGE #2
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+// 1. Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
+// "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!".
+// 2. Modify the outputs above to use template literals to include the BMI values in the outputs.
+// Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI (29.1) is higher than Mark's (27)!".
+// Note: Don't round the BMI values. Leave them as they are.
+
+
+
+
+
+
+
+// Assignment11:Functions 
+// Write a function called describeCountry which takes three parameters: country, population and capitalCity. Based on this input, the function returns a string with this format: 'Finland has 6 million people and its capital city is Helsinki'.
+
+// Call this function 3 times, with input data for 3 different countries. Store the returned values in 3 different variables, and log them to the console.
+
+function describeCountry (country, population, capitalCity) {
+       return `${country} has ${population} million people and its capital city is ${capitalCity}`
+}
+
+console.log(describeCountry('Sigapore', 7, 'Sigapore'));
+console.log(describeCountry('Finland', 10, 'Helsinki'));
+console.log(describeCountry('America', 12, 'Washigaton'));
+
+
+
+
+// Assignment12:Function Declarations vs. Expressions﻿
+// 1)The world population is 7900 million people. Create a function declaration called percentageOfWorld1 which receives a population value, and returns the percentage of the world population that the given population represents. For example, China has 1441 million people, so it's about 18.2% of the world population.
+
+// 2)To calculate the percentage, divide the given population value by 7900 and then multiply by 100.
+
+// 3)Call percentageOfWorld1 for 3 populations of countries of your choice, store the results into variables, and log them to the console.
+
+// 4)Create a function expression which does the exact same thing, called percentageOfWolrd2, and also call it with 3 country populations (can be the same populations).
+
+
+function percentageOfWorld1 (population) {
+       return ` has ${population} million people, so it's about ${(population / 7900 * 100).toFixed(1)} % of the world `;
+}
+
+
+console.log("China",percentageOfWorld1( 1441));
+console.log("India",percentageOfWorld1( 1408.0));
+console.log("America",percentageOfWorld1( 342));
+
+
+const percentageOfWolrd2 = function (population) {
+     return `has ${population} million people, so it's about ${(population / 7900 * 100).toFixed(1)} % of the world `;
+}
+
+
+console.log("China", percentageOfWolrd2(1441));
+console.log("India", percentageOfWolrd2(1408.0));
+console.log("America", percentageOfWolrd2(342));
+
+
+
+// Assignment13:Arrow FunctionsRecreate the last assignment, but this time create an arrow function called percentageOfWorld3.
+// Assignment:13 Functions Calling Other Functions﻿
+// 1)Create a function called describePopulation. Use the function type you like the most. This function takes in two arguments: country and population, and returns a strings like this: 'China has 1441 million people, which is about 18.2% of the world'.
+
+// 2)To calculate the percentage, describePopulation calls the percentageOfWorld1 you created earlier.
+
+// 3)Call describePopulation with data for 3 countries of your choice.
+
+
+
+const describePopulation = (countries, population) => {
+     const percentage = percentageOfWorld1(population)
+     return `${countries} ${percentage}`
+     
+}
+
+console.log(describePopulation('India', 1408.0));
+console.log(describePopulation('America', 342));
+console.log(describePopulation('China', 1441));

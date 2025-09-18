@@ -155,20 +155,11 @@ console.log(`Population increase by 1 : ${population} million`);
 
 
 let populationFinland = 6  // million
-if(population > populationFinland){
-     console.log(`population ${population} million is More than populationFinland ${populationFinland} million`)
-} else {
-     console.log(`population ${population} million is less than populationFinland ${populationFinland} million`)  
-}
+console.log(`Does ${country} have more people than Finland : ${population > populationFinland ? 'true' : 'false'}` );
 
-let average = 33  // million
+let averageCountry = 33  // million
+console.log(`Does ${country} have less people than averageCountry : ${population < averageCountry ? 'true' : 'false'}` );
 
-if(population < average){
-      console.log(`population ${population} million is less than average ${average} million`);
-      
-} else {
-      console.log(`population ${population} million is More than average ${average} million`);
-}
 
 language = 'English'
 let description = `${country} is in ${continent} and its ${population} is million people speak ${language}`
@@ -182,9 +173,28 @@ console.log(description);
 
 // After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
 
+    let newCountry = 'Portugal';
+    let newPopulation = 55; // million
+    if(newPopulation > averageCountry){
+         console.log(`${newCountry}'s population is ${Math.abs(averageCountry - newPopulation)} million below average.`);
+         
+    } 
 
+    averageCountry = 13;
+    if(newPopulation > 13){
+     
+        console.log(`${newCountry}'s population is ${newPopulation - averageCountry} million Above average.`);
+    } else {
+         console.log(`${newCountry}'s population is ${Math.abs(averageCountry - newPopulation)} million below average.`);
+    }
 
-
+    averageCountry = 130
+    if(newPopulation > averageCountry){
+         console.log(`${newCountry}'s population is ${Math.abs(averageCountry - newPopulation)} million below average.`);
+    } else {
+         console.log(`${newCountry}'s population is ${Math.abs(newPopulation - averageCountry)} million above average.`);
+        
+    }
 
 // Assignment:6--Type Conversion and Coercion﻿
 // Predict the result of these 5 operations without executing them:
@@ -204,62 +214,6 @@ console.log(description);
  console.log(5 + 6 + '4' + 9 - 4 - 2);  
 
  
-
-//  Assignment:7---Declare a variable numNeighbours based on a prompt input like this:
-
-// prompt('How many neighbour countries does your contry have?');
-// If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now).
-
-// Use an else-if block to log 'More than 1 border' in case numNeighbours is greater than 1.
-
-// Use an else block to log 'No borders' (this block will be executed when numNeighbours is 0 or any other value).
-
-// Test the code with different values of numNeighbours, including 1 and 0.
-
-// Change == to ===, and test the code again, with the same values of numNeighbours. Notice what happens when there is exactly 1 border! Why is this happening?
-
-// Finally, convert numNeighbours to a number, and watch what happens now when you input 1.
-
-// Reflect on why we should use the === operator and type conversion in this situation.
- 
-
-
-//   let numNeighbours = prompt('How many neighbour countries does your contry have?')
-//   if(numNeighbours == 1){
-//        console.log('Only 1 border.')
-//   } else if (numNeighbours > 1) {
-//        console.log('More than 1 border.')
-//   } else {
-//        console.log('No borders.')
-//   }
-
-  
-
-//   let numNeighbours1 = prompt('How many neighbour countries does your contry have?')
-//   if(numNeighbours1 === 1){
-//        console.log('Only 1 border.')        // output : No borders
-//   } else if (numNeighbours1 > 1) {
-//        console.log('More than 1 border.')
-//   } else {
-//        console.log('No borders.')
-//   }
-  
-//   // here prompt returns a string not a number this 1 is treated in '1'. that's why it doesn't match any case and log No borders.
-// //   '1' === 1   // false
-
-
-// let numNeighbours2 = Number(prompt('How many neighbour countries does your contry have?'))
-//   if(numNeighbours2 === 1){
-//        console.log('Only 1 border.')        
-//   } else if (numNeighbours2 > 1) {
-//        console.log('More than 1 border.')
-//   } else {
-//        console.log('No borders.')
-//   }
-  
-  
-
-
 
 
 //   Assignment:8--Logical Operators﻿
@@ -372,7 +326,22 @@ console.log(`${country1} population is ${population1 > 33 ? 'above' : 'below'} a
 // Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI (29.1) is higher than Mark's (27)!".
 // Note: Don't round the BMI values. Leave them as they are.
 
+    
+    function calculateBmi (markMass, markHeight, johnMass, johnHeight) {
+    let markBmi = ( markMass / (markHeight  * markHeight) ).toFixed(2)
+    let johnBmi = (johnMass /  (johnHeight  * johnHeight )).toFixed(2)
+    
+    if(markBmi > johnBmi){
+         return `mark's bmi (${markBmi}) is higher than john's bmi (${johnBmi})`
+    } else {
+        
+         return `john's bmi (${johnBmi}) is higher than mark's bmi (${markBmi})` 
+    }
 
+}
+
+console.log(calculateBmi( 78, 1.69, 92, 1.95 ));    // Data 1
+console.log(calculateBmi( 95, 1.88, 85, 1.76));    // Data 2
 
 
 
@@ -403,7 +372,7 @@ console.log(describeCountry('America', 12, 'Washigaton'));
 
 // 4)Create a function expression which does the exact same thing, called percentageOfWolrd2, and also call it with 3 country populations (can be the same populations).
 
-
+//   Function Declaration
 function percentageOfWorld1 (population) {
        return ` has ${population} million people, so it's about ${(population / 7900 * 100).toFixed(1)} % of the world `;
 }
@@ -413,6 +382,7 @@ console.log("China",percentageOfWorld1( 1441));
 console.log("India",percentageOfWorld1( 1408.0));
 console.log("America",percentageOfWorld1( 342));
 
+//  Function Expression
 
 const percentageOfWolrd2 = function (population) {
      return `has ${population} million people, so it's about ${(population / 7900 * 100).toFixed(1)} % of the world `;
@@ -434,6 +404,7 @@ console.log("America", percentageOfWolrd2(342));
 // 3)Call describePopulation with data for 3 countries of your choice.
 
 
+//  Arrow Function
 
 const describePopulation = (countries, population) => {
      const percentage = percentageOfWorld1(population)

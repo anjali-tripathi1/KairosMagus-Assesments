@@ -185,19 +185,19 @@ checkWinner(scoreDolphins2, scoreKoalas2)
 
 
 function calcTip (bill) {
-      return bill >= 50 && bill <= 300 ? `tip ${bill * 0.15} % of the bill`  :  `tip ${bill * 0.2} % of the bill` 
+      return bill >= 50 && bill <= 300 ?  `${bill * 0.15} % tip`   :  `${bill * 0.2} % tip`
 } 
 
 console.log(calcTip(100));
 
 let bills = [125, 555, 44]
 
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+const tips =  [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
 
-const totals = bills.map((bill, tips) => bill + tips ); 
+const totals = bills.map((bill, i) => bill + tips[i])
 
- console.log(bills);
- console.log(tips);
- console.log(totals);
+ console.log("bills", bills);
+ console.log("tips", tips);
+ console.log("totals", totals);
  
 

@@ -28,3 +28,5 @@ const changeName = neighbours.indexOf('Nepal')
 if(changeName !== -1){
      neighbours[changeName] = 'Kingdom of bhutan'
 }
+
+console.log(neighbours);

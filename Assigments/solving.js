@@ -68,8 +68,6 @@ if(bmiMark2 > bmiJohn2 ){
 }
 
 
-
-
 //    solution-2
 
 function calculateBmi (markMass, markHeight, johnMass, johnHeight) {
@@ -89,10 +87,6 @@ console.log(calculateBmi( 78, 1.69, 92, 1.95 ));    // Data 1
 console.log(calculateBmi( 95, 1.88, 85, 1.76));    // Data 2
 
   
-
-
-
-
 
 // Code Challenge:CHALLENGE #2
 // Use the BMI example from Challenge #1, and the code you already wrote, and improve it:

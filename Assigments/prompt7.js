@@ -10,17 +10,38 @@
 // Reflect on why we should use the === operator and type conversion in this situation.
 
 
+const {stdin, stdout} = require('process')
+const readline = require('readline')
+const rl = readline.createInterface({
+      input: stdin, 
+      output: stdout
+});
+
+rl.question('How many neighbour country do you have?', function (num) {
+      const value = Number(num)
+      if(value === 1){
+           console.log('Only 1 border')
+      } else if (value > 1) {
+           console.log('More than 1 border')
+      } else {
+           console.log('No borders')
+      }
+
+      rl.close()
+});
+     
 
 
 
-let numNeighbours = prompt('How many neighbour countries does your contry have?')
-  if(numNeighbours == 1){
-       console.log('Only 1 border.')
-  } else if (numNeighbours > 1) {
-       console.log('More than 1 border.')
-  } else {
-       console.log('No borders.')
-  }
+
+// let numNeighbours = prompt('How many neighbour countries does your contry have?')
+//   if(numNeighbours == 1){
+//        console.log('Only 1 border.')
+//   } else if (numNeighbours > 1) {
+//        console.log('More than 1 border.')
+//   } else {
+//        console.log('No borders.')
+//   }
 
   
 

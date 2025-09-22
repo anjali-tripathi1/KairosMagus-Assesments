@@ -26,7 +26,7 @@ if(!neighbours.includes('Germany')){
 
 const changeName = neighbours.indexOf('Nepal')
 if(changeName !== -1){
-     neighbours[changeName] = 'Kingdom of bhutan'
+     neighbours[changeName] = 'Republic of Nepal'
 }
 
 console.log(neighbours);

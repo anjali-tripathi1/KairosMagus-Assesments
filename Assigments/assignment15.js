@@ -30,3 +30,10 @@ if(changeName !== -1){
 }
 
 console.log(neighbours);
+
+const remove = neighbours.indexOf('China')
+if(remove !== -1){
+      neighbours.splice(remove, 1)
+}
+
+console.log(neighbours);

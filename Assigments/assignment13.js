@@ -24,3 +24,10 @@ const describePopulation = (countries, population) => {
 console.log(describePopulation('India', 1408.0));
 console.log(describePopulation('America', 342));
 console.log(describePopulation('China', 1441));
+
+
+const describeCountry2 = (countries, population) => {
+       return `${countries} has ${population} million people and Its's ${(population / 7900 * 100).toFixed(1)} of the world`
+}
+
+console.log(describeCountry2('India', 1408.0));

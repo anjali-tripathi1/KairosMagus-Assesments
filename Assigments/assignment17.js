@@ -15,5 +15,7 @@ console.log(`${myCountry.country} has ${myCountry.population} million ${myCountr
 
 
 myCountry.population += 2  // million
-console.log(myCountry.population);
+console.log(`Population After Increment : ${myCountry.population} million.`);
  
+myCountry["population"] -= 2   //  million
+console.log(`Population After Decrement : ${myCountry["population"]} million.`);

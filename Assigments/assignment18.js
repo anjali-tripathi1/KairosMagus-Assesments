@@ -9,8 +9,8 @@ let myCountry = {
      capital : 'Delhi',
      language : 'Hindi',
      population : 1408.0,   // million
-     neighbours : [0]
-     // ['Bangladesh', 'Nepal', 'China'],
+     neighbours :  ['Bangladesh', 'Nepal', 'China'],
+
 }
 
 
@@ -23,8 +23,7 @@ myCountry.describe()
 
 
 myCountry.checkIsland = function () {
-    return isIsland = this.neighbours.length === 0 ? true : false
-      }
+    return isIsland = this.neighbours.length === 0 ? ` Neighbour countries are [${myCountry.neighbours.length}] so the result will be ${true}` : ` Neighbour countries are [${myCountry.neighbours.length}] so the result will be ${false}`  }
 
 console.log(myCountry.checkIsland());
        

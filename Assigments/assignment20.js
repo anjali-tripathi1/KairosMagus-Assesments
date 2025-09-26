@@ -15,10 +15,20 @@ function percentageOfWorld1 (country, populations) {
 
 let percentages2 = []
 for(let i = 0; i < populations.length; i++){
-    return percentages2.push(populations[i] / 7900 * 100)
-    //  percentages2.push(percentageOfWorld1(populations[i]))
+    const countries = ['India', 'China', 'America', 'Singapore']
+    percentages2.push(percentageOfWorld1(countries[i], populations[i]))
+    
 }
 
 console.log(percentages2);
 
 
+
+let percentages = [
+     percentageOfWorld1('India', populations[0]),
+     percentageOfWorld1('China', populations[1]),
+     percentageOfWorld1('America', populations[2]),
+     percentageOfWorld1('Singapore', populations[3])
+]
+
+console.log(percentages);

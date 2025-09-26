@@ -9,14 +9,26 @@ let myCountry = {
      capital : 'Delhi',
      language : 'Hindi',
      population : 1408.0,   // million
-     neighbours : ['Bangladesh', 'Nepal', 'China'],
-    
+     neighbours : [0]
+     // ['Bangladesh', 'Nepal', 'China'],
 }
+
 
 myCountry.describe = function () {
      console.log(`${this.country} has ${this.population} million ${this.language}-speaking people and ${this.neighbours.length} neighbouring countries are [${this.neighbours}] and a capital called ${this.capital}.`)
-}
+     },
 
 myCountry.describe()
+
+
+
+myCountry.checkIsland = function () {
+    return isIsland = this.neighbours.length === 0 ? true : false
+      }
+
+console.log(myCountry.checkIsland());
+       
+
+
 
 

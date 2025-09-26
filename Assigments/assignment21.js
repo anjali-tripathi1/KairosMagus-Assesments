@@ -30,3 +30,4 @@ if(index !== -1){
     array.splice(index , 0, 'Mumbai')
 }
 console.log(array);
+

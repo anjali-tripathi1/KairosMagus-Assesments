@@ -32,3 +32,17 @@ let percentages = [
 ]
 
 console.log(percentages);
+
+if(JSON.stringify(percentages2) === JSON.stringify(percentages)){
+    console.log( 'Arrays are matched.');
+} else {
+    console.log('Arrays are not matched.');
+}
+
+let percentage3 = []
+for(let i = 0; i < populations.length; i++){
+       const percentage = populations[i]
+       percentage3.push(percentage/ 7900 * 100) 
+}
+
+console.log(percentage3);

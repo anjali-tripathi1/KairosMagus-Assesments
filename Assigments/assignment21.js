@@ -15,3 +15,18 @@ for(let i = 0; i < listOfNeighbours.length; i++ ){
       }
 }
 
+let array = [['canada', 'Mexico', ['Norway'], ['Bangladesh'], ['America']]]
+// for(let i = 0; i < array.length; i++){
+//       for(let j = 0; j < array.length[i]; j++){
+//             for(let k = 0; k < array.length[j]; k++ ){
+//                    console.log(array[i][j][k]);
+                   
+//             }
+//       }
+// }
+
+const index = array.indexOf('Mexico')
+if(index !== -1){
+    array.splice(index , 0, 'Mumbai')
+}
+console.log(array);

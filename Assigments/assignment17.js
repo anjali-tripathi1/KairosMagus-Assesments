@@ -19,3 +19,6 @@ console.log(`Population After Increment : ${myCountry.population} million.`);
  
 myCountry["population"] -= 2   //  million
 console.log(`Population After Decrement : ${myCountry["population"]} million.`);
+
+myCountry.neighbours.push('India')
+console.log(myCountry.neighbours);

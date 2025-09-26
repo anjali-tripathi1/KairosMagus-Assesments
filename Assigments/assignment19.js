@@ -5,10 +5,10 @@ for(let i = 1; i <= 50; i++){
       console.log(`voter number ${i} is currently voting.`)
 }
 
-function calculateVoting (to, till) {
-     for(let i = to; i <= till; i++){
-          console.log(`voter number ${i} is currently voting.`)
-     }
-}
+// function calculateVoting (to, till) {
+//      for(let i = to; i <= till; i++){
+//           console.log(`voter number ${i} is currently voting.`)
+//      }
+// }
 
-calculateVoting(1, 50)
+// calculateVoting(1, 50)
